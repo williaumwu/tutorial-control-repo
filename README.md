@@ -17,37 +17,43 @@ elasticdev/scripts - scripts used in the project for continuous delivery.
 1) GitHub Account 
 2) AWS Access key and secret key
 
-3a) Dockerhub account
-3b) Dockerhub destination @ https://hub.docker.com/r/<username>/flask-sample
+3) Dockerhub account
+4) Dockerhub destination @ https://hub.docker.com/r/<username>/flask-sample
 
-or 
+   or 
 
-simply an empty docker registry/repo named "flask-sample"
+   simply an empty docker registry/repo named "flask-sample"
 
 # PLEASE CHANGE
 
 1) Add Public ssh key (access/ssh_keys)
 
-e.g. johndoe
-
-cp -rp /home/johndoe/.ssh/id_rsa.pub elasticdev/access/ssh_keys/johndoe.pub
-
-2) Change username in elasticdev/elasticdev.yml
-
-- insert your github username where it has <username> in the file
-- insert your dockerhub username where it has <docker_username> in the file
+   e.g. johndoe
+   
+   cp -rp /home/johndoe/.ssh/id_rsa.pub elasticdev/access/ssh_keys/johndoe.pub
+   
+   2) Change username in elasticdev/elasticdev.yml
+   
+   - insert your github username where it has <username> in the file
+   - insert your dockerhub username where it has <docker_username> in the file
 
 # EXPLANATION
 
-./elasticdev/configs/build/Dockerfile - The Dockerfile used to build the docker container for the flask-sample
-
-./elasticdev/configs/deploy/Dockerfile.ja2 - The Dockerfile template used to create the deploy container for the flask-sample
-./elasticdev/configs/deploy/docker-compose.yml.ja2 - The docker-compose used to the properly deploy the flask-sample application
-./elasticdev/elasticdev.yml - the main control file used for ElasticDev
-./elasticdev/access/ssh_keys/johndoe.pub - ssh keys that will allow you access to the build and deploy containers
-
-./elasticdev/scripts - the directory for miscellaneous scripts that can be used by build and deploy 
-./elasticdev/scripts/install_mysql.sh - the script used to install mysql client tools for the deploy container
-./elasticdev/scripts/createdb.sh - the script used to create the flask-sample database in MySQL
-./elasticdev/scripts/create_schema.sh - the script used to create the flask-sample schema in the flask-sample database in MySQL
-./elasticdev/scripts/seed.sql - the seed sql statement used by create_schema.sh`
+  ./elasticdev/configs/build/Dockerfile          - The Dockerfile used to build the docker container 
+                                                   for the flask-sample
+  
+  ./elasticdev/configs/deploy/Dockerfile.ja2     - The Dockerfile template used to create the 
+                                                   deploy container for the flask-sample
+  ./elasticdev/configs/deploy/docker-compose.yml.ja2 - The docker-compose used to the 
+                                                       properly deploy the flask-sample application
+  ./elasticdev/elasticdev.yml - the main control file used for ElasticDev
+  ./elasticdev/access/ssh_keys/johndoe.pub - ssh keys that will allow you access to 
+                                             the build and deploy containers
+  
+  ./elasticdev/scripts - the directory for miscellaneous scripts that can be used by 
+                         build and deploy 
+  ./elasticdev/scripts/install_mysql.sh - the script used to install mysql client tools for the deploy container
+  ./elasticdev/scripts/createdb.sh - the script used to create the flask-sample database in MySQL
+  ./elasticdev/scripts/create_schema.sh - the script used to create the flask-sample schema in 
+                                          the flask-sample database in MySQL
+  ./elasticdev/scripts/seed.sql - the seed sql statement used by create_schema.sh`
