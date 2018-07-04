@@ -7,9 +7,13 @@ This is control repo used for Elasticdev.io's tutorial.  It is repo used to cont
 The control repo consists of an elasticdev folder that contain:
 
 elasticdev/elasticdev.yml  - controls the infrastructure, build, and deploy for a particular project
+
 elasticdev/access/ssh_keys - the folder that contain the ssh public keys of users who have access to build and deploy containers.  use one file per key.
+
 elasticdev/configs/build - the folder that contains the templates (e.g. Dockerfile.ja2) and files used for testing and building the code in containers
+
 elasticdev/configs/deploy - the folder that contains the templates and files for deploying to a Dockerhost or a Kubernetes
+
 elasticdev/scripts - scripts used in the project for continuous delivery.
 
 # WHAT YOU NEED
