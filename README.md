@@ -40,6 +40,7 @@ The control repo consists of an elasticdev folder that contain:
    
    - insert your github username where it has <username> in the file
    - insert your dockerhub username where it has <docker_username> in the file
+   - insert your AWS region that you onboarding where it has <region> in the file
 
 # EXPLANATION
 

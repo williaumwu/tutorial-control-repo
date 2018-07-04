@@ -1,11 +1,10 @@
 global_arguments:
    EnvVars:
-      TEST_VARIABLE: TEST_VALUE
-   region: us-east-1
+      TEST_VARIABLE: HELLO
+   region: <region>
    db_type: mysql
    sg_db_label: database
    sg_web_label: web
-   gitops: True
 infrastructure:
    vpc:
        stack_name: aws_vpc_2tier
@@ -22,12 +21,12 @@ infrastructure:
           engine: "MySQL"
           az: False
 build:
-   flask_sample_1:
+   flask_sample:
        stack_name: build_dev
        repo_url: https://github.com/<username>/flask-sample
-       repo_branch: dev1
+       repo_branch: master
        triggered_branches:
-                 - dev1
+                 - master
        arguments:
           DOCKER_FILE_BUILD: configs/build/Dockerfile
           DOCKER_PROVIDER: docker.io
@@ -40,13 +39,13 @@ build:
            EnvVars:
              DockerImage: DOCKER_IMAGE_FLASK
    triggers:
-       - name: flask_sample_dev1
+       - name: flask_sample_master
          type: trigger
-         path: deploy::flask_dev1
+         path: deploy::flask_master
          channels:
              - deploy_1
 deploy:
-    flask_dev1:
+    flask_master:
        stack_name: deploy_dev
        arguments:
            EnvVars:
