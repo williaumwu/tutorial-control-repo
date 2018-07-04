@@ -6,15 +6,15 @@ This is control repo used for Elasticdev.io's tutorial.  It is repo used to cont
 
 The control repo consists of an elasticdev folder that contain:
 
-elasticdev/elasticdev.yml  - controls the infrastructure, build, and deploy for a particular project
+    - elasticdev/elasticdev.yml  - controls the infrastructure, build, and deploy for a particular project
 
-elasticdev/access/ssh_keys - the folder that contain the ssh public keys of users who have access to build and deploy containers.  use one file per key.
+    - elasticdev/access/ssh_keys - the folder that contain the ssh public keys of users who have access to build and deploy containers.  use one file per key.
 
-elasticdev/configs/build - the folder that contains the templates (e.g. Dockerfile.ja2) and files used for testing and building the code in containers
+    - elasticdev/configs/build - the folder that contains the templates (e.g. Dockerfile.ja2) and files used for testing and building the code in containers
 
-elasticdev/configs/deploy - the folder that contains the templates and files for deploying to a Dockerhost or a Kubernetes
+    - elasticdev/configs/deploy - the folder that contains the templates and files for deploying to a Dockerhost or a Kubernetes
 
-elasticdev/scripts - scripts used in the project for continuous delivery.
+    - elasticdev/scripts - scripts used in the project for continuous delivery.
 
 # WHAT YOU NEED
 
@@ -43,29 +43,29 @@ elasticdev/scripts - scripts used in the project for continuous delivery.
 
 # EXPLANATION
 
-  -  ./elasticdev/configs/build/Dockerfile - The Dockerfile used to build the docker container 
+  -  elasticdev/configs/build/Dockerfile - The Dockerfile used to build the docker container 
                                             for the flask-sample
     
-  -  ./elasticdev/configs/deploy/Dockerfile.ja2 - The Dockerfile template used to create the 
+  -  elasticdev/configs/deploy/Dockerfile.ja2 - The Dockerfile template used to create the 
                                                  deploy container for the flask-sample
   
-  -  ./elasticdev/configs/deploy/docker-compose.yml.ja2 - The docker-compose used to the 
+  -  elasticdev/configs/deploy/docker-compose.yml.ja2 - The docker-compose used to the 
                                                          properly deploy the flask-sample application
   
-  -  ./elasticdev/elasticdev.yml - the main control file used for ElasticDev
+  -  elasticdev/elasticdev.yml - the main control file used for ElasticDev
   
-  -  ./elasticdev/access/ssh_keys/johndoe.pub - ssh keys that will allow you access to 
+  -  elasticdev/access/ssh_keys/johndoe.pub - ssh keys that will allow you access to 
                                                the build and deploy containers
     
-  -  ./elasticdev/scripts - the directory for miscellaneous scripts that can be used by 
+  -  elasticdev/scripts - the directory for miscellaneous scripts that can be used by 
                            build and deploy 
   
-  -  ./elasticdev/scripts/install_mysql.sh - the script used to install mysql client tools for the 
+  -  elasticdev/scripts/install_mysql.sh - the script used to install mysql client tools for the 
                                             deploy container
   
-  -  ./elasticdev/scripts/createdb.sh - the script used to create the flask-sample database in MySQL
+  -  elasticdev/scripts/createdb.sh - the script used to create the flask-sample database in MySQL
   
-  -  ./elasticdev/scripts/create_schema.sh - the script used to create the flask-sample schema in 
+  -  elasticdev/scripts/create_schema.sh - the script used to create the flask-sample schema in 
                                             the flask-sample database in MySQL
   
-  -  ./elasticdev/scripts/seed.sql - the seed sql statement used by create_schema.sh`
+  -  elasticdev/scripts/seed.sql - the seed sql statement used by create_schema.sh`
