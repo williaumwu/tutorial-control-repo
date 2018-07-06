@@ -38,9 +38,9 @@ The control repo consists of an elasticdev folder that contain:
    
 2) Change username in elasticdev/elasticdev.yml
    
-   - insert your github username where it has <username> in the file
-   - insert your dockerhub username where it has <docker_username> in the file
-   - insert your AWS region that you onboarding where it has <region> in the file
+   - insert your github username where it has \<username\>\ in the file
+   - insert your dockerhub username where it has \<docker_username\>\ in the file
+   - insert your AWS region that you onboarding where it has \<region\>\ in the file
 
 # EXPLANATION
 
@@ -57,8 +57,8 @@ The control repo consists of an elasticdev folder that contain:
      
      -  elasticdev/elasticdev.yml - the main control file used for ElasticDev
      
-     -  elasticdev/access/ssh_keys/johndoe.pub - ssh keys that will allow you access to 
-                                                  the build and deploy containers
+     -  elasticdev/access/ssh_keys - ssh keys that will allow you access to 
+                                     the build and deploy containers
        
      -  elasticdev/scripts - the directory for miscellaneous scripts that can be used by 
                               build and deploy 
