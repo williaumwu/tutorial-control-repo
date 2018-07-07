@@ -1,7 +1,7 @@
 global_arguments:
    EnvVars:
       TEST_VARIABLE: HELLO
-   region: <region>
+   region: us-east-1
    db_type: mysql
    sg_db_label: database
    sg_web_label: web
@@ -23,14 +23,14 @@ infrastructure:
 build:
    flask_sample:
        stack_name: build_dev
-       repo_url: https://github.com/<username>/flask-sample
+       repo_url: https://github.com/williaumwu/flask-sample
        repo_branch: master
        triggered_branches:
                  - master
        arguments:
           DOCKER_FILE_BUILD: configs/build/Dockerfile
           DOCKER_PROVIDER: docker.io
-          DOCKER_USERNAME: <docker_username>
+          DOCKER_USERNAME: williaumwu
           DOCKER_REPO_TYPE: public
           DOCKER_REPO_NAME: flask-sample
        results:
