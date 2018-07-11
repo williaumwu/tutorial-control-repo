@@ -23,7 +23,7 @@ infrastructure:
 build:
    flask_sample:
        stack_name: build_dev
-       repo_url: https://github.com/williaumwu/flask-sample
+       repo_url: https://github.com/williaumwu/tutorial-flask-sample
        repo_branch: master
        triggered_branches:
                  - master
