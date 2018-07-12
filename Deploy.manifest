@@ -1,4 +1,4 @@
-# Deploy Manifest ID: J4SA05TGS3XPFRTVXU8RABMZPMK598
+# Deploy Manifest ID: NUUVQB8YME4BRWX79D0IRFNOQTSJMW
 # Automated Deploy by ED through GitOps
 
 ################################
@@ -6,13 +6,13 @@
 ################################
 
 **** https://github.com/williaumwu/tutorial-flask-sample ****
-commit_url: https://github.com/williaumwu/tutorial-flask-sample/commit/fbca3c93f1844f304b0cadf8aadfcafde6be7863
-commit_hash: fbca3c93f1844f304b0cadf8aadfcafde6be7863
-message: Updated index.html - First Change for tutorial.
+commit_url: https://github.com/williaumwu/tutorial-flask-sample/commit/273998eb577087cd5221079c18f08ad2698a1cf2
+commit_hash: 273998eb577087cd5221079c18f08ad2698a1cf2
+message: Commit to invoke build
 author: William Wu
 committer: GitHub
-authored_date: 2018-07-11T17:23:09-07:00
-committed_date: 2018-07-11T17:23:09-07:00
+authored_date: 2018-07-11T19:44:15-07:00
+committed_date: 2018-07-11T19:44:15-07:00
 
 ################################
 # Environment Variables from build
@@ -20,7 +20,7 @@ committed_date: 2018-07-11T17:23:09-07:00
 
 DOCKER_FILE: elasticdev/configs/build/Dockerfile
 SSH_PORT: 22001
-DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:APFYDUOHPZKKFDOY
-DOCKER_IMAGE_NAME: APFYDUOHPZKKFDOY
-DOCKER_IMAGE_TAG: APFYDUOHPZKKFDOY
-image_tag: APFYDUOHPZKKFDOY
+DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:SSEVVEKDCKOYHXSR
+DOCKER_IMAGE_NAME: SSEVVEKDCKOYHXSR
+DOCKER_IMAGE_TAG: SSEVVEKDCKOYHXSR
+image_tag: SSEVVEKDCKOYHXSR
