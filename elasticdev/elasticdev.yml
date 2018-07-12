@@ -21,7 +21,7 @@ infrastructure:
           engine: "MySQL"
           az: False
 build:
-   flask_sample:
+   web:
        stack_name: build_dev
        repo_url: https://github.com/williaumwu/tutorial-flask-sample
        repo_branch: master
@@ -44,6 +44,36 @@ build:
          path: deploy::flask_master
          channels:
              - deploy_1
+   api:
+       stack_name: build_dev
+       repo_url: https://github.com/williaumwu/tutorial-flask-sample
+       repo_branch: api
+       triggered_branches:
+                 - api
+       arguments:
+          DOCKER_FILE_BUILD: configs/build/Dockerfile
+          DOCKER_PROVIDER: docker.io
+          DOCKER_USERNAME: williaumwu
+          DOCKER_REPO_TYPE: public
+          DOCKER_REPO_NAME: flask-sample
+       rename:
+           EnvVars:
+             DockerImage: DOCKER_IMAGE_API
+   gateway:
+       stack_name: build_dev
+       repo_url: https://github.com/williaumwu/tutorial-flask-sample
+       repo_branch: gateway
+       triggered_branches:
+                 - gateway
+       arguments:
+          DOCKER_FILE_BUILD: configs/build/Dockerfile
+          DOCKER_PROVIDER: docker.io
+          DOCKER_USERNAME: williaumwu
+          DOCKER_REPO_TYPE: public
+          DOCKER_REPO_NAME: flask-sample
+       rename:
+           EnvVars:
+             DockerImage: DOCKER_IMAGE_GATEWAY
 deploy:
     flask_master:
        stack_name: deploy_dev
