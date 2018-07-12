@@ -1,0 +1,27 @@
+# Deploy Manifest ID: RBX1NNCA6FXZKUEL2GG7MGXV4NIYX2
+# Automated Deploy by ED through GitOps
+
+################################
+# Repo/Commit Info
+################################
+
+**** https://github.com/williaumwu/tutorial-flask-sample ****
+commit_url: https://github.com/williaumwu/tutorial-flask-sample/commit/c4888e20cdd1517bc4ad898a1143e019ecd67848
+commit_hash: c4888e20cdd1517bc4ad898a1143e019ecd67848
+message: first commit
+
+author: gary leong
+committer: gary leong
+authored_date: 2018-07-04 00:17:56
+committed_date: 2018-07-04 00:17:56
+
+################################
+# Environment Variables from build
+################################
+
+DOCKER_FILE: elasticdev/configs/build/Dockerfile
+SSH_PORT: 22001
+DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:ISZZHSDHOJQTZRCA
+DOCKER_IMAGE_NAME: ISZZHSDHOJQTZRCA
+DOCKER_IMAGE_TAG: ISZZHSDHOJQTZRCA
+image_tag: ISZZHSDHOJQTZRCA
