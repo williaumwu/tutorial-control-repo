@@ -1,4 +1,4 @@
-# Deploy Manifest ID: 41WJZMBX3209HNLGFLQBYV0MMVB6YB
+# Deploy Manifest ID: 21BMWWMSQM7O2I0B1H2GELAGIX0NFS
 # Automated Deploy by ED through GitOps
 
 ################################
@@ -16,12 +16,26 @@ authored_date: 2018-07-12 22:25:16
 committed_date: 2018-07-12 22:25:16
 
 ################################
+# Repo/Commit Info
+################################
+
+**** https://github.com/williaumwu/demo-web ****
+commit_url: https://github.com/williaumwu/demo-web/commit/d870bfb52290eeae0a3e98a1a4a39d492e1fae59
+commit_hash: d870bfb52290eeae0a3e98a1a4a39d492e1fae59
+message: first commit
+
+author: gary leong
+committer: gary leong
+authored_date: 2018-07-13 00:32:52
+committed_date: 2018-07-13 00:32:52
+
+################################
 # Environment Variables from build
 ################################
 
 DOCKER_FILE: elasticdev/configs/build/Dockerfile
 SSH_PORT: 22002
-DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:YLJXWYKPRDXUSZXU
-DOCKER_IMAGE_NAME: YLJXWYKPRDXUSZXU
-DOCKER_IMAGE_TAG: YLJXWYKPRDXUSZXU
-image_tag: YLJXWYKPRDXUSZXU
+DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:PYYSTFYTNYXLCTDB
+DOCKER_IMAGE_NAME: PYYSTFYTNYXLCTDB
+DOCKER_IMAGE_TAG: PYYSTFYTNYXLCTDB
+image_tag: PYYSTFYTNYXLCTDB
