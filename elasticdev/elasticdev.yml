@@ -23,7 +23,7 @@ infrastructure:
 build:
    web:
        stack_name: build_dev
-       repo_url: https://github.com/williaumwu/tutorial-flask-sample
+       repo_url: https://github.com/williaumwu/demo-web
        repo_branch: master
        triggered_branches:
                  - master
@@ -46,10 +46,10 @@ build:
              - deploy_1
    api:
        stack_name: build_dev
-       repo_url: https://github.com/williaumwu/tutorial-flask-sample
-       repo_branch: api
+       repo_url: https://github.com/williaumwu/demo-api
+       repo_branch: master
        triggered_branches:
-                 - api
+                 - master
        arguments:
           DOCKER_FILE_BUILD: configs/build/Dockerfile
           DOCKER_PROVIDER: docker.io
@@ -61,10 +61,10 @@ build:
              DockerImage: DOCKER_IMAGE_API
    gateway:
        stack_name: build_dev
-       repo_url: https://github.com/williaumwu/tutorial-flask-sample
-       repo_branch: gateway
+       repo_url: https://github.com/williaumwu/demo-gateway
+       repo_branch: master
        triggered_branches:
-                 - gateway
+                 - master
        arguments:
           DOCKER_FILE_BUILD: configs/build/Dockerfile
           DOCKER_PROVIDER: docker.io
