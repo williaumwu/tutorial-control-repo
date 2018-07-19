@@ -1,4 +1,4 @@
-# Deploy Manifest ID: NFGFEFSBI5Y5PBCV8EQ3Y0247TDVU0
+# Deploy Manifest ID: QQJIE0N5PJNC1GRKHVV61D38UFSWPQ
 # Automated Deploy by ED through GitOps
 
 ################################
@@ -20,14 +20,13 @@ committed_date: 2018-07-12 22:25:16
 ################################
 
 **** https://github.com/williaumwu/demo-web ****
-commit_url: https://github.com/williaumwu/demo-web/commit/f794661fc6f8d3793e565767c0d2876366acb1f0
-commit_hash: f794661fc6f8d3793e565767c0d2876366acb1f0
-message: auto trigger
-
+commit_url: https://github.com/williaumwu/demo-web/commit/dfafeea510e1ffab7c26622de87f070625bdca9f
+commit_hash: dfafeea510e1ffab7c26622de87f070625bdca9f
+message: testing change new string fnWj9dxO
 author: gary leong
 committer: gary leong
-authored_date: 2018-07-13 05:47:44
-committed_date: 2018-07-13 05:47:44
+authored_date: 2018-07-18T19:53:44-07:00
+committed_date: 2018-07-18T19:53:44-07:00
 
 ################################
 # Environment Variables from build
@@ -35,7 +34,7 @@ committed_date: 2018-07-13 05:47:44
 
 DOCKER_FILE: elasticdev/configs/build/Dockerfile
 SSH_PORT: 22002
-DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:SYMRTCLPDHTXSNWT
-DOCKER_IMAGE_NAME: SYMRTCLPDHTXSNWT
-DOCKER_IMAGE_TAG: SYMRTCLPDHTXSNWT
-image_tag: SYMRTCLPDHTXSNWT
+DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:QWNKKPRGNAAUTTUE
+DOCKER_IMAGE_NAME: QWNKKPRGNAAUTTUE
+DOCKER_IMAGE_TAG: QWNKKPRGNAAUTTUE
+image_tag: QWNKKPRGNAAUTTUE
