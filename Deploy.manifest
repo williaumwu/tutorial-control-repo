@@ -1,4 +1,4 @@
-# Deploy Manifest ID: NQRVJR4SGDFFFPNCRPCZ8ABD6VZ09W
+# Deploy Manifest ID: NFGFEFSBI5Y5PBCV8EQ3Y0247TDVU0
 # Automated Deploy by ED through GitOps
 
 ################################
@@ -23,10 +23,11 @@ committed_date: 2018-07-12 22:25:16
 commit_url: https://github.com/williaumwu/demo-web/commit/f794661fc6f8d3793e565767c0d2876366acb1f0
 commit_hash: f794661fc6f8d3793e565767c0d2876366acb1f0
 message: auto trigger
+
 author: gary leong
 committer: gary leong
-authored_date: 2018-07-12T22:47:44-07:00
-committed_date: 2018-07-12T22:47:44-07:00
+authored_date: 2018-07-13 05:47:44
+committed_date: 2018-07-13 05:47:44
 
 ################################
 # Environment Variables from build
@@ -34,7 +35,7 @@ committed_date: 2018-07-12T22:47:44-07:00
 
 DOCKER_FILE: elasticdev/configs/build/Dockerfile
 SSH_PORT: 22002
-DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:KOXLZVAYKSKGIKIF
-DOCKER_IMAGE_NAME: KOXLZVAYKSKGIKIF
-DOCKER_IMAGE_TAG: KOXLZVAYKSKGIKIF
-image_tag: KOXLZVAYKSKGIKIF
+DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:SYMRTCLPDHTXSNWT
+DOCKER_IMAGE_NAME: SYMRTCLPDHTXSNWT
+DOCKER_IMAGE_TAG: SYMRTCLPDHTXSNWT
+image_tag: SYMRTCLPDHTXSNWT
