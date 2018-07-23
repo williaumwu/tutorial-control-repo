@@ -1,4 +1,4 @@
-{{ DOCKER_DEPLOY_NAME }}:
+3_tier_deploy_flask_master:
   restart: always
   build: ./
   ports:
