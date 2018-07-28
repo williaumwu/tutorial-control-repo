@@ -11,15 +11,15 @@ infrastructure:
    dockerhost:
        stack_name: aws_ec2_dockerhost_dev
        arguments:
-          size: t2.medium
+          size: t2.micro
           disksize: 50
-   db:
-       stack_name: aws_db_rds
-       arguments:
-          flavor: "db.t2.micro"
-          size: 5
-          engine: "MySQL"
-          az: False
+#   db:
+#       stack_name: aws_db_rds
+#       arguments:
+#          flavor: "db.t2.micro"
+#          size: 5
+#          engine: "MySQL"
+#          az: False
 build:
    web:
        stack_name: build_dev
@@ -29,6 +29,10 @@ build:
                  - master
        arguments:
           DOCKER_FILE_BUILD: configs/build/Dockerfile
+          DOCKER_FILE_TEST: configs/build/test/Dockerfile
+          DOCKER_TEST_SCRIPTS: 
+                              - test_1.sh
+                              - test_2.sh
           DOCKER_PROVIDER: docker.io
           DOCKER_USERNAME: williaumwu
           DOCKER_REPO_TYPE: public
@@ -44,36 +48,36 @@ build:
          path: deploy::flask_master
          channels:
              - deploy_1
-   api:
-       stack_name: build_dev
-       repo_url: https://github.com/williaumwu/demo-api
-       repo_branch: master
-       triggered_branches:
-                 - master
-       arguments:
-          DOCKER_FILE_BUILD: configs/build/Dockerfile
-          DOCKER_PROVIDER: docker.io
-          DOCKER_USERNAME: williaumwu
-          DOCKER_REPO_TYPE: public
-          DOCKER_REPO_NAME: flask-sample
-       rename:
-           EnvVars:
-             DockerImage: DOCKER_IMAGE_API
-   gateway:
-       stack_name: build_dev
-       repo_url: https://github.com/williaumwu/demo-gateway
-       repo_branch: master
-       triggered_branches:
-                 - master
-       arguments:
-          DOCKER_FILE_BUILD: configs/build/Dockerfile
-          DOCKER_PROVIDER: docker.io
-          DOCKER_USERNAME: williaumwu
-          DOCKER_REPO_TYPE: public
-          DOCKER_REPO_NAME: flask-sample
-       rename:
-           EnvVars:
-             DockerImage: DOCKER_IMAGE_GATEWAY
+#   api:
+#       stack_name: build_dev
+#       repo_url: https://github.com/williaumwu/demo-api
+#       repo_branch: master
+#       triggered_branches:
+#                 - master
+#       arguments:
+#          DOCKER_FILE_BUILD: configs/build/Dockerfile
+#          DOCKER_PROVIDER: docker.io
+#          DOCKER_USERNAME: williaumwu
+#          DOCKER_REPO_TYPE: public
+#          DOCKER_REPO_NAME: flask-sample
+#       rename:
+#           EnvVars:
+#             DockerImage: DOCKER_IMAGE_API
+#   gateway:
+#       stack_name: build_dev
+#       repo_url: https://github.com/williaumwu/demo-gateway
+#       repo_branch: master
+#       triggered_branches:
+#                 - master
+#       arguments:
+#          DOCKER_FILE_BUILD: configs/build/Dockerfile
+#          DOCKER_PROVIDER: docker.io
+#          DOCKER_USERNAME: williaumwu
+#          DOCKER_REPO_TYPE: public
+#          DOCKER_REPO_NAME: flask-sample
+#       rename:
+#           EnvVars:
+#             DockerImage: DOCKER_IMAGE_GATEWAY
 deploy:
     flask_master:
        stack_name: deploy_dev
