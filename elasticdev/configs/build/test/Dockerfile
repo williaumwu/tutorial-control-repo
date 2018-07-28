@@ -1,5 +1,5 @@
 FROM python:2.7-onbuild
-MAINTAINER gary leong <gwleong@gmail.com>
+MAINTAINER elasticdev <info@elasticdev.io>
 
 #############################################
 RUN echo "Running tests assuming /usr/src/app"
@@ -15,6 +15,5 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update --fix-missing
 ADD run.sh /usr/bin/run.sh
 
-EXPOSE 22
 CMD ["/usr/bin/run.sh"]
 
