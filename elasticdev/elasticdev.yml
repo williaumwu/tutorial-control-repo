@@ -22,7 +22,7 @@ infrastructure:
 #          az: False
 build:
    web:
-       stack_name: build_dev
+       stack_name: gary:::public::Stacks/CI/General/Dev/DirectPull/Test/main
        repo_url: https://github.com/williaumwu/demo-web
        repo_branch: master
        triggered_branches:
