@@ -1,0 +1,27 @@
+# Deploy Manifest ID: IK2N3PBJ6VRXPSSH4UMI5Y8QIT4G3N
+# Automated Deploy by ED through GitOps
+
+################################
+# Repo/Commit Info
+################################
+
+**** https://github.com/williaumwu/demo-web ****
+commit_url: https://github.com/williaumwu/demo-web/commit/eee92391ffda0676b27f3461c1529c11ade1eae8
+commit_hash: eee92391ffda0676b27f3461c1529c11ade1eae8
+message: update
+
+author: gary leong
+committer: gary leong
+authored_date: 2018-07-28 03:37:55
+committed_date: 2018-07-28 03:37:55
+
+################################
+# Environment Variables from build
+################################
+
+DOCKER_FILE: elasticdev/configs/build/Dockerfile
+SSH_PORT: 22001
+DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:QEZKBMYXTWSKEOVQ
+DOCKER_IMAGE_NAME: QEZKBMYXTWSKEOVQ
+DOCKER_IMAGE_TAG: QEZKBMYXTWSKEOVQ
+image_tag: QEZKBMYXTWSKEOVQ
