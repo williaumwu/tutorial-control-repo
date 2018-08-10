@@ -1,4 +1,4 @@
-# Deploy Manifest ID: MHYKKWTITK01Z38FCADQX374QLQNZ9
+# Deploy Manifest ID: RZTGMNO9FKTTPI1QNUCCVOKS7T5XKO
 # Automated Deploy by ED through GitOps
 
 ################################
@@ -8,11 +8,11 @@
 **** https://github.com/williaumwu/demo-web ****
 commit_url: https://github.com/williaumwu/demo-web/commit/8b18376a23901bcc04c5b6dbb861643dae40151d
 commit_hash: 8b18376a23901bcc04c5b6dbb861643dae40151d
-message: testing change new string q4RzDuTz
+message: testing change new string ZVnnuAwG
 author: gary leong
 committer: gary leong
-authored_date: 2018-08-10T11:58:01-07:00
-committed_date: 2018-08-10T11:58:01-07:00
+authored_date: 2018-08-10T13:56:22-07:00
+committed_date: 2018-08-10T13:56:22-07:00
 
 ################################
 # Environment Variables from build
@@ -20,7 +20,7 @@ committed_date: 2018-08-10T11:58:01-07:00
 
 DOCKER_FILE: elasticdev/configs/build/Dockerfile
 SSH_PORT: 22001
-DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:GPYWEHXMHNWRBOKK
-DOCKER_IMAGE_NAME: GPYWEHXMHNWRBOKK
-DOCKER_IMAGE_TAG: GPYWEHXMHNWRBOKK
-image_tag: GPYWEHXMHNWRBOKK
+DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:LCYYJFSDUETUTLKN
+DOCKER_IMAGE_NAME: LCYYJFSDUETUTLKN
+DOCKER_IMAGE_TAG: LCYYJFSDUETUTLKN
+image_tag: LCYYJFSDUETUTLKN
