@@ -22,18 +22,18 @@ fi
 cd $TEST_DIR
 pytest
 
-#rc=$?
-#
-#if [[ $rc != 0 ]]
-#   then 
-#       echo "pytest failed!"
-#       exit 1
-#fi
+rc=$?
+
+if [[ $rc != 0 ]]
+   then 
+       echo "pytest failed!"
+       exit 1
+fi
 
 
-#if [ "$(ls -A $TEST_DIR)" ]; then
-#     echo "Test directory $TEST_DIR is not Empty"
-#else
-#    echo "$TEST_DIR is Empty"
-#    exit 0
-#fi
+if [ "$(ls -A $TEST_DIR)" ]; then
+     echo "Test directory $TEST_DIR is not Empty"
+else
+    echo "$TEST_DIR is Empty"
+    exit 0
+fi
