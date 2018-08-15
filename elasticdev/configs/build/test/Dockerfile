@@ -15,5 +15,5 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update --fix-missing
 ADD run.sh /usr/bin/run.sh
 
-CMD ["/usr/bin/run.sh"]
-
+# execute the tests
+RUN ["/usr/bin/run.sh"]
