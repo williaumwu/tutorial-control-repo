@@ -1,4 +1,4 @@
-# Deploy Manifest ID: 1AXUHLTTIAGHSCFPOVD2CA6CAYWHCK
+# Deploy Manifest ID: 6EDE1US974CZUL2787TFUTJJXNDU7K
 # Automated Deploy by ED through GitOps
 
 ################################
@@ -6,14 +6,14 @@
 ################################
 
 **** https://github.com/williaumwu/demo-web ****
-commit_url: https://github.com/williaumwu/demo-web/commit/7a7e873607843fa88c820ddda139d16a1c937d1d
-commit_hash: 7a7e873607843fa88c820ddda139d16a1c937d1d
-message: testing change new string oPCf2fqI
+commit_url: https://github.com/williaumwu/demo-web/commit/afe84b38e016b12e2c1046fe45f3bd99b7a0e20e
+commit_hash: afe84b38e016b12e2c1046fe45f3bd99b7a0e20e
+message: testing change new string 66vwSccO
 
 author: gary leong
 committer: gary leong
-authored_date: 2018-08-11 16:36:56
-committed_date: 2018-08-11 16:36:56
+authored_date: 2018-08-15 05:07:51
+committed_date: 2018-08-15 05:07:51
 
 ################################
 # Environment Variables from build
@@ -21,7 +21,7 @@ committed_date: 2018-08-11 16:36:56
 
 DOCKER_FILE: elasticdev/configs/build/Dockerfile
 SSH_PORT: 22002
-DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:PNWBPMGJUNZFQZFG
-DOCKER_IMAGE_NAME: PNWBPMGJUNZFQZFG
-DOCKER_IMAGE_TAG: PNWBPMGJUNZFQZFG
-image_tag: PNWBPMGJUNZFQZFG
+DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:JVMANWZFDVOZFBJG
+DOCKER_IMAGE_NAME: JVMANWZFDVOZFBJG
+DOCKER_IMAGE_TAG: JVMANWZFDVOZFBJG
+image_tag: JVMANWZFDVOZFBJG
