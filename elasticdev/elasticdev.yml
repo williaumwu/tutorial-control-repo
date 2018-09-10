@@ -47,36 +47,36 @@ build:
          path: deploy::flask_master
          channels:
              - deploy_1
-#   api:
-#       stack_name: build_dev
-#       repo_url: https://github.com/williaumwu/demo-api
-#       repo_branch: master
-#       triggered_branches:
-#                 - master
-#       arguments:
-#          DOCKER_FILE_BUILD: configs/build/Dockerfile
-#          DOCKER_PROVIDER: docker.io
-#          DOCKER_USERNAME: williaumwu
-#          DOCKER_REPO_TYPE: public
-#          DOCKER_REPO_NAME: flask-sample
-#       rename:
-#           EnvVars:
-#             DockerImage: DOCKER_IMAGE_API
-#   gateway:
-#       stack_name: build_dev
-#       repo_url: https://github.com/williaumwu/demo-gateway
-#       repo_branch: master
-#       triggered_branches:
-#                 - master
-#       arguments:
-#          DOCKER_FILE_BUILD: configs/build/Dockerfile
-#          DOCKER_PROVIDER: docker.io
-#          DOCKER_USERNAME: williaumwu
-#          DOCKER_REPO_TYPE: public
-#          DOCKER_REPO_NAME: flask-sample
-#       rename:
-#           EnvVars:
-#             DockerImage: DOCKER_IMAGE_GATEWAY
+   api:
+       stack_name: build_dev
+       repo_url: https://github.com/williaumwu/demo-api
+       repo_branch: master
+       triggered_branches:
+                 - master
+       arguments:
+          DOCKER_FILE_BUILD: configs/build/Dockerfile
+          DOCKER_PROVIDER: docker.io
+          DOCKER_USERNAME: williaumwu
+          DOCKER_REPO_TYPE: public
+          DOCKER_REPO_NAME: flask-sample
+       rename:
+           EnvVars:
+             DockerImage: DOCKER_IMAGE_API
+   gateway:
+       stack_name: build_dev
+       repo_url: https://github.com/williaumwu/demo-gateway
+       repo_branch: master
+       triggered_branches:
+                 - master
+       arguments:
+          DOCKER_FILE_BUILD: configs/build/Dockerfile
+          DOCKER_PROVIDER: docker.io
+          DOCKER_USERNAME: williaumwu
+          DOCKER_REPO_TYPE: public
+          DOCKER_REPO_NAME: flask-sample
+       rename:
+           EnvVars:
+             DockerImage: DOCKER_IMAGE_GATEWAY
 deploy:
     flask_master:
        stack_name: deploy_dev
