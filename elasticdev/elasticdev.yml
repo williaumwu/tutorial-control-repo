@@ -70,6 +70,10 @@ build:
                  - master
        arguments:
           DOCKER_FILE_BUILD: configs/build/Dockerfile
+          DOCKER_FILE_TEST: configs/build/test/Dockerfile
+          DOCKER_TEST_SCRIPTS: 
+                              - test_1.sh
+                              - test_2.sh
           DOCKER_PROVIDER: docker.io
           DOCKER_USERNAME: williaumwu
           DOCKER_REPO_TYPE: public
