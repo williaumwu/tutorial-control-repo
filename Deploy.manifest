@@ -1,4 +1,4 @@
-# Deploy Manifest ID: MP8Q18P535T9BR3ZUXSO9GL2ACVZJ4
+# Deploy Manifest ID: R574C0YHSP6I1GZXCF42HHRDFVAMFL
 # Automated Deploy by ED through GitOps
 
 ################################
@@ -20,8 +20,8 @@ committed_date: 2018-09-13 18:42:49
 ################################
 
 DOCKER_FILE: elasticdev/configs/build/Dockerfile
-SSH_PORT: 22002
-DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:FSOHBPJDFCMQBPBU
-DOCKER_IMAGE_NAME: FSOHBPJDFCMQBPBU
-DOCKER_IMAGE_TAG: FSOHBPJDFCMQBPBU
-image_tag: FSOHBPJDFCMQBPBU
+SSH_PORT: 22001
+DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:RMKKNBZJELRPLQBV
+DOCKER_IMAGE_NAME: RMKKNBZJELRPLQBV
+DOCKER_IMAGE_TAG: RMKKNBZJELRPLQBV
+image_tag: RMKKNBZJELRPLQBV
