@@ -8,6 +8,8 @@ global_arguments:
 infrastructure:
    vpc:
        stack_name: aws_vpc_2tier
+       arguments:
+           vpc_peer: null
    dockerhost:
        stack_name: aws_ec2_dockerhost_dev
        arguments:
