@@ -16,6 +16,13 @@ infrastructure:
           size: t2.micro
           disksize: 50
           ip_key: public_ip
+       stack_vars:
+           gary:::public::Core/Docker/JiffyHost/Guest/register:
+                                                       arguments:
+                                                           ip_key: public_ip
+                                                       EnvVars:
+                                                           NAME_VAR: jimmy
+       
    #db:
    #    stack_name: aws_db_rds
    #    arguments:
