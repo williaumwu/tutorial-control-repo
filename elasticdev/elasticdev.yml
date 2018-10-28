@@ -10,6 +10,12 @@ infrastructure:
        stack_name: aws_vpc_2tier
        arguments:
            vpc_peer: null
+       stack_vars:
+           gary:::public::Core/Docker/JiffyHost/Guest/register:
+                                                       arguments:
+                                                           ip_key: public_ip
+                                                       EnvVars:
+                                                           NAME_VAR: jimmy
    dockerhost:
        stack_name: aws_ec2_dockerhost_dev
        arguments:
