@@ -10,25 +10,17 @@ infrastructure:
        stack_name: aws_vpc_2tier
        arguments:
            vpc_peer: null
-       stack_vars:
-           gary:::public::Core/Docker/JiffyHost/Guest/register:
-                                                       arguments:
-                                                           ip_key: public_ip
-                                                       EnvVars:
-                                                           NAME_VAR: jimmy
    dockerhost:
        stack_name: aws_ec2_dockerhost_dev
        arguments:
           size: t2.micro
           disksize: 50
-          ip_key: public_ip
        stack_vars:
-           gary:::public::Core/Docker/JiffyHost/Guest/register:
-                                                       arguments:
-                                                           ip_key: public_ip
-                                                       EnvVars:
-                                                           NAME_VAR: jimmy
-       
+           gary:::public::Core/Host/Ubuntu/add_host:
+                                                 arguments:
+                                                     ip_key: public_ip
+                                                 EnvVars:
+                                                     NAME_VAR: jimmy
    #db:
    #    stack_name: aws_db_rds
    #    arguments:
