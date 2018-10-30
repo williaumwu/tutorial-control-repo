@@ -19,6 +19,9 @@ infrastructure:
            gary:::public::Core/Host/Ubuntu/add_host:
                                                  arguments:
                                                      ip_key: public_ip
+           gary:::public::Core/Docker/JiffyHost/Guest/register:
+                                                 arguments:
+                                                     ip_key: public_ip
                                                  EnvVars:
                                                      NAME_VAR: jimmy
    #db:
