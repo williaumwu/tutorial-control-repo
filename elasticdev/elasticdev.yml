@@ -19,11 +19,6 @@ infrastructure:
            gary:::public::Core/Host/Ubuntu/add_host:
                                                  arguments:
                                                      ip_key: public_ip
-           gary:::public::Core/Docker/JiffyHost/Guest/register:
-                                                 arguments:
-                                                     ip_key: public_ip
-                                                 EnvVars:
-                                                     NAME_VAR: jimmy
    #db:
    #    stack_name: aws_db_rds
    #    arguments:
@@ -38,6 +33,12 @@ build:
        repo_branch: master
        triggered_branches:
                  - master
+       stack_vars:
+           gary:::public::Core/Docker/JiffyHost/Guest/register:
+                                                 arguments:
+                                                     ip_key: public_ip
+                                                 EnvVars:
+                                                     NAME_VAR: jimmy
        arguments:
           DOCKER_FILE_BUILD: configs/build/Dockerfile
           DOCKER_FILE_TEST: configs/build/test/Dockerfile
