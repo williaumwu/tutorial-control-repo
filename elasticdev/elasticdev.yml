@@ -9,7 +9,7 @@ infrastructure:
    vpc:
        stack_name: aws_vpc_2tier
        arguments:
-           vpc_peer: True
+           vpc_peer: jiffy
    dockerhost:
        stack_name: aws_ec2_dockerhost_dev
        arguments:
