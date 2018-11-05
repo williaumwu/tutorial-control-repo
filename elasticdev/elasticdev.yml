@@ -9,7 +9,7 @@ infrastructure:
    vpc:
        stack_name: aws_vpc_2tier
        arguments:
-           vpc_peer: null
+           vpc_peer: True
    dockerhost:
        stack_name: aws_ec2_dockerhost_dev
        arguments:
@@ -18,7 +18,7 @@ infrastructure:
        stack_vars:
            gary:::public::Core/Host/Ubuntu/add_host:
                                                  arguments:
-                                                     ip_key: public_ip
+                                                     ip_key: private_ip
    db:
        stack_name: aws_db_rds
        arguments:
@@ -36,7 +36,7 @@ build:
        stack_vars:
            gary:::public::Core/Docker/JiffyHost/Guest/register:
                                                  arguments:
-                                                     ip_key: public_ip
+                                                     ip_key: private_ip
                                                  EnvVars:
                                                      NAME_VAR: jimmy
        arguments:
