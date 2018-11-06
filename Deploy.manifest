@@ -1,0 +1,27 @@
+# Deploy Manifest ID: 4XRXPNA9ZINGNB9SZDBNIYGTNELVHM
+# Automated Deploy by ED through GitOps
+
+################################
+# Repo/Commit Info
+################################
+
+**** https://github.com/williaumwu/demo-web ****
+commit_url: https://github.com/williaumwu/demo-web/commit/c608fba0cef2e2917883733ee8c4221f67cbeec4
+commit_hash: c608fba0cef2e2917883733ee8c4221f67cbeec4
+message: testing change new string lLnchhxU
+
+author: Gary
+committer: Gary
+authored_date: 2018-11-06 04:49:12
+committed_date: 2018-11-06 04:49:12
+
+################################
+# Environment Variables from build
+################################
+
+DOCKER_FILE: elasticdev/configs/build/Dockerfile
+SSH_PORT: 22001
+DOCKER_IMAGE_FLASK: docker.io/williaumwu/flask-sample:QVKXFZQWDWVHAFQU
+DOCKER_IMAGE_NAME: QVKXFZQWDWVHAFQU
+DOCKER_IMAGE_TAG: QVKXFZQWDWVHAFQU
+image_tag: QVKXFZQWDWVHAFQU
