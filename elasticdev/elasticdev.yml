@@ -62,6 +62,12 @@ build:
 deploy:
     flask_master:
        stack_name: deploy_dev
+       stack_vars:
+           gary:::public::Core/Docker/JiffyHost/Guest/register:
+                                                 arguments:
+                                                     ip_key: public_ip
+                                                 EnvVars:
+                                                     NAME_VAR: jimmy
        arguments:
            EnvVars:
                MYSQL_DB_NAME: flask
