@@ -1,2 +1,2 @@
-FROM docker.io/williaumwu/flask-sample:NQCSHLBCITNNDSXN
+FROM docker.io/williaumwu/flask-sample:RCOFFGVHQDFBMHYU
 EXPOSE 80
