@@ -11,7 +11,7 @@ infrastructure:
        arguments:
            vpc_peer: null
    dockerhost:
-       stack_name: aws_ec2_dockerhost_dev
+       stack_name: ed:::public::deploy/docker/dev/singlehost/create
        arguments:
           size: t2.micro
           disksize: 25
