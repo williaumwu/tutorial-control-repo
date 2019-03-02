@@ -7,18 +7,18 @@ global_arguments:
    sg_web_label: web
 infrastructure:
    vpc:
-       stack_name: aws_vpc_2tier
+       stack_name: williaumwu::::aws_vpc_2tier
        arguments:
            vpc_peer: null
-   dockerhost:
-       stack_name: ed:::public::deploy/docker/dev/singlehost/create
-       arguments:
-          size: t2.micro
-          disksize: 25
-       stack_vars:
-           gary:::public::Core/Host/Ubuntu/add_host:
-                                                 arguments:
-                                                     ip_key: public_ip
+#   dockerhost:
+#       stack_name: ed:::public::deploy/docker/dev/singlehost/create
+#       arguments:
+#          size: t2.micro
+#          disksize: 25
+#       stack_vars:
+#           gary:::public::Core/Host/Ubuntu/add_host:
+#                                                 arguments:
+#                                                     ip_key: public_ip
 #   db:
 #       stack_name: aws_db_rds
 #       arguments:
