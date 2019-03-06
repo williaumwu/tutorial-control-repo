@@ -7,7 +7,7 @@ global_arguments:
    sg_web_label: web
 infrastructure:
    vpc:
-       stack_name: williaumwu:::aws_vpc_2tier
+       stack_name: elasticdev:::aws_vpc_2tier
        arguments:
            vpc_peer: null
 #   dockerhost:
