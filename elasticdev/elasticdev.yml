@@ -8,12 +8,15 @@ global_arguments:
 infrastructure:
    vpc:
        stack_name: elasticdev:::aws_vpc_2tier
-       stack_vars:
-           - name: elasticdev:::ubuntu::ec2_ubuntu
-             arguments:
-                  ip_key: public_ip
        arguments:
            vpc_peer: null
+   db:
+       stack_name: aws_db_rds
+       arguments:
+          flavor: "db.t2.micro"
+          size: 5
+          engine: "MySQL"
+          az: False
    dockerhost:
        stack_name: elasticdev:::docker::ec2_docker_host
        arguments:
@@ -23,13 +26,6 @@ infrastructure:
            - name: elasticdev:::ubuntu::ec2_ubuntu
              arguments:
                   ip_key: public_ip
-#   db:
-#       stack_name: aws_db_rds
-#       arguments:
-#          flavor: "db.t2.micro"
-#          size: 5
-#          engine: "MySQL"
-#          az: False
 #build:
 #   web:
 #       stack_name: gary:::public::Stacks/CI/General/Dev/DirectPull/Test/main
