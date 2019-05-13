@@ -7,7 +7,7 @@ global_arguments:
    sg_web_label: web
 infrastructure:
        apigateway:
-           stack_name: elasticdev:::apigateway
+           stack_name: elasticdev:::api_gateway
            arguments:
                name: test3
 #       vpc:
