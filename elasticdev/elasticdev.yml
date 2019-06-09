@@ -9,7 +9,7 @@ build:
    ci_example:
        stack_name: elasticdev:::ec2_ci
        arguments:
-           repo_url: https://github.com/bill12252016/flask_sample
+           repo_url: https://github.com/williaumwu/flask_sample
            repo_branch: master
            docker_repo: flask_sample
            triggered_branches:
