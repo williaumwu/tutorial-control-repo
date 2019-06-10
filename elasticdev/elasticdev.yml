@@ -18,7 +18,8 @@ infrastructure:
                   ip_key: public_ip
 build:
    ci_example:
-       dependencies: infrastructure::dockerhost
+       dependencies: 
+           - infrastructure::dockerhost
        stack_name: elasticdev:::ec2_ci
        arguments:
            docker_host: docker_flask_sample
