@@ -6,28 +6,47 @@ global_arguments:
    sg_db_label: database
    sg_web_label: web
 infrastructure:
+       apigateway:
+           stack_name: elasticdev:::api_gateway
+           arguments:
+               name: api_gateway
+       vpc:
+           stack_name: elasticdev:::aws_vpc_2tier
+           arguments:
+               vpc_peer: null
    dockerhost:
-       stack_name: elasticdev:::ec2_docker_host
+       stack_name: elasticdev:::docker::ec2_docker_host
+       dependencies: infrastructure::vpc
        arguments:
-          hostname: docker_flask_sample
           size: t2.micro
           disksize: 25
        stack_vars:
            - name: elasticdev:::ubuntu::ec2_ubuntu
              arguments:
                   ip_key: public_ip
-build:
-   ci_example:
-       dependencies: 
-           - infrastructure::dockerhost
-       stack_name: elasticdev:::ec2_ci
-       arguments:
-           docker_host: docker_flask_sample
-           repo_url: https://github.com/williaumwu/flask_sample
-           repo_branch: master
-           docker_repo: flask_sample
-           triggered_branches:
-             - master
+#infrastructure:
+#   dockerhost:
+#       stack_name: elasticdev:::ec2_docker_host
+#       arguments:
+#          hostname: docker_flask_sample
+#          size: t2.micro
+#          disksize: 25
+#       stack_vars:
+#           - name: elasticdev:::ubuntu::ec2_ubuntu
+#             arguments:
+#                  ip_key: public_ip
+#build:
+#   ci_example:
+#       dependencies: 
+#           - infrastructure::dockerhost
+#       stack_name: elasticdev:::ec2_ci
+#       arguments:
+#           docker_host: docker_flask_sample
+#           repo_url: https://github.com/williaumwu/flask_sample
+#           repo_branch: master
+#           docker_repo: flask_sample
+#           triggered_branches:
+#             - master
 #infrastructure:
 #       apigateway:
 #           stack_name: elasticdev:::api_gateway
